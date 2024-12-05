@@ -1,9 +1,12 @@
 import React from 'react'
 import styles from './Home.module.css'
-import Banner from '../../assets/banner.png'
+import Mensal from '../Planos/Mensal/Mensal'
+import Anual from '../Planos/Anual/Anual'
 
 import { LiaSearchSolid } from "react-icons/lia";
+
 const Home = () => {
+
   return (
     <section className='container pt-10'>
      
@@ -20,7 +23,17 @@ const Home = () => {
 
         </div>
 
-         
+        <div className='pt-12'>
+             
+        </div>
+
+         <div>
+          <Mensal/>
+         </div>
+
+         <div>
+          <Anual/>
+         </div>
       
     </section>
   )

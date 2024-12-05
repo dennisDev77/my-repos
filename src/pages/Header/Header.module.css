@@ -3,6 +3,11 @@
         width: 10rem;
     }
 }
+/* .iconBuy span{
+    background-color: #FF0505;
+    height: 100%;
+    width: 1px;
+} */
 .profile{
    & img{
     width:3.5rem;

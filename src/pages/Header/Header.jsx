@@ -9,25 +9,26 @@ const Header = () => {
 
   return (
 
-    <section className='border flex flex-wrap  justify-between items-center px-4' >
+    <section className='flex flex-wrap  justify-between items-center px-4 shadow-sm sticky w-full' >
         
         <Link to='/' className={styles.logo}>
             <img src={logo} alt="Carregndo o logotipo" />
         </Link>
 
-        <div className='menus'>
-            <Link to='/'>Home</Link>
-            <Link to=''>Pacotes Mensal</Link>
-            <Link to=''>Pacotes Anuais</Link>
-            <Link to=''>Suporte</Link>
+        <div className='menus text-center flex flex-wrap justify-center items-center gap-3 font-light text-base'>
+            <Link to='/' className='hover:scale-95 transition'>Home</Link>
+            <Link to='' className='hover:scale-95 transition'>Pacotes Mensal</Link>
+            <Link to='' className='hover:scale-95 transition'>Pacotes Anuais</Link>
+            <Link to='' className='hover:scale-95 transition'>Suporte</Link>
         </div>
 
-        <div className='config flex flex-wrap justify-between items-center gap-8 px-2 border'>
+        <div className='flex flex-wrap justify-between items-center gap-8 px-2 '>
 
             <div className='car'>
                 
-                <Link className='text-3xl text-color-red'>
-                <FaCartShopping/>
+                <Link className={`${styles.iconBuy} text-3xl flex flex-wrap justify-center `}>
+                 <FaCartShopping/>
+                 <span></span>
                 </Link>
 
                 {/* <span>
@@ -35,8 +36,9 @@ const Header = () => {
                 </span> */}
             </div>
 
-            <Link className={`${styles.profile} p-2`}>
+            <Link className={`${styles.profile} p-2 flex flex-wrap gap-2 justify-center items-center text-base`}>
                 <span><img src={profile} alt="Carregando Perfil" /></span>
+                <span>Camela</span>
             </Link>
         </div>
     </section>

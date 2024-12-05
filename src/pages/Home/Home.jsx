@@ -2,8 +2,9 @@ import React from 'react'
 import styles from './Home.module.css'
 import Mensal from '../Planos/Mensal/Mensal'
 import Anual from '../Planos/Anual/Anual'
-
+import {ObterPacote} from '../Data/Data'
 import { LiaSearchSolid } from "react-icons/lia";
+import { Link } from 'react-router-dom'
 
 const Home = () => {
 
@@ -23,10 +24,6 @@ const Home = () => {
 
         </div>
 
-        <div className='pt-12'>
-             
-        </div>
-
          <div>
           <Mensal/>
          </div>
@@ -34,6 +31,18 @@ const Home = () => {
          <div>
           <Anual/>
          </div>
+
+         <div className='pt-20 flex flex-wrap justify-center items-center gap-10'>
+          {
+            ObterPacote.map((obter)=>(
+             <Link key={obter.id} className='shadow-md shadow-slate-300 rounded-md flex flex-col flex-wrap justify-center items-center w-1/6  h-32'>
+
+                  <span className='text-color-red text-3xl'>{obter.icon}</span>
+                  <span className=''>{obter.title}</span>
+             </Link>
+            ))
+          }
+        </div>
       
     </section>
   )

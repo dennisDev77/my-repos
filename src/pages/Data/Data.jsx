@@ -33,6 +33,14 @@ export const PlanosMensal=[
         icon:<FaCartShopping/>,
         img:card3
      },
+     {
+        id:4,
+        descricao:'10 Unidades Restantes',
+        button:'Comprar',
+        icon:<FaCartShopping/>,
+        img:card3
+     },
+
 ]
 
 export const PlanosAnual=[
@@ -57,9 +65,16 @@ export const PlanosAnual=[
         icon:<FaCartShopping/>,
         img:card3
      },
+     {
+        id:4,
+        descricao:'10 Unidades Restantes',
+        button:'Comprar',
+        icon:<FaCartShopping/>,
+        img:card3
+     },
 ]
 
-export const Obter=[
+export const ObterPacote=[
    {
       id:1,
       title:'Download',

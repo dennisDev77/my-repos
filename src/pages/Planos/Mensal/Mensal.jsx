@@ -1,5 +1,6 @@
 import React from 'react'
 import { PlanosMensal } from '../../Data/Data'
+import {Link} from 'react-router-dom'
 
 const Mensal = () => {
 
@@ -19,7 +20,13 @@ const Mensal = () => {
       </div>
         ))
     }
+    
       </div>
+
+    <div className='flex flex-wrap items-center pt-3'>
+
+      <Link className='text-color-red text-sm font-light underline text-center'>Ver Tudo</Link>
+    </div>
     </section>
   )
 }

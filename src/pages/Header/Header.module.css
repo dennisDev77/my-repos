@@ -1,0 +1,12 @@
+.logo{
+    & img{
+        width: 10rem;
+    }
+}
+.profile{
+   & img{
+    width:3.5rem;
+    border:2px solid #FF0505;
+    border-radius:10rem
+   }
+}

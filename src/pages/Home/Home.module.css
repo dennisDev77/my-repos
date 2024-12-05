@@ -1,0 +1,28 @@
+.inputSearch{
+    border-bottom-left-radius: 20rem;
+    border-top-left-radius: 20rem;
+    border: 2px solid #ec4343;
+    border-right: none;
+    transition: .5s;
+
+    &:hover,
+    &:focus{
+        box-shadow: 0 0 0 1px rgb(231, 66, 94), 0 0 0 1px #FF0505;
+    }
+}
+.inputSearch::placeholder{
+    font-size: 1rem;
+}
+
+.buttonSearch{
+    border-bottom-right-radius: 20rem;
+    border-top-right-radius: 20rem;
+    border: 2px solid #ec4343;
+    transition: .5s;
+    border-left: none;
+
+    &:hover,
+    &:focus{
+        box-shadow: 0 0 0 1px rgb(231, 66, 94), 0 0 0 1px #FF0505;
+    }
+}

@@ -5,8 +5,8 @@ function App() {
 
   return (
     <>
-  <div>
-      <h1 className='text-blue-500 text-2xl'>Bem Vindo ao Ativa Recargas</h1>
+  <div className=''>
+      <h2 className='text-red-500'>Bem Vindo ao Nosso Site</h2>
   </div>
     </>
   )

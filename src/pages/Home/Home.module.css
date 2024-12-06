@@ -12,6 +12,7 @@
 }
 .inputSearch::placeholder{
     font-size: 1rem;
+    color: rgb(173, 163, 163);
 }
 
 .buttonSearch{

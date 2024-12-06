@@ -35,7 +35,7 @@ const Home = () => {
          <div className='pt-20 flex flex-wrap justify-center items-center gap-10'>
           {
             ObterPacote.map((obter)=>(
-             <Link key={obter.id} className='shadow-md shadow-slate-300 rounded-md flex flex-col flex-wrap justify-center items-center w-1/6  h-32'>
+             <Link key={obter.id} className='border border-color-red shadow-md shadow-slate-300 rounded-md flex flex-col flex-wrap justify-center items-center w-1/6  h-32'>
 
                   <span className='text-color-red text-3xl'>{obter.icon}</span>
                   <span className=''>{obter.title}</span>

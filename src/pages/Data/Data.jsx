@@ -43,6 +43,24 @@ export const PlanosMensal=[
 
 ]
 
+export const ObterPacote=[
+   {
+      id:1,
+      title:'Download',
+      icon: <FaCloudDownloadAlt/>
+   },
+   {
+      id:2,
+      title:'Whasapp',
+      icon: <FaWhatsapp/>
+   },
+   {
+      id:3,
+      title:'Pagar Com Pix',
+      icon: <FaPix/>
+   },
+]
+
 export const PlanosAnual=[
      {
         id:1,
@@ -72,22 +90,4 @@ export const PlanosAnual=[
         icon:<FaCartShopping/>,
         img:card3
      },
-]
-
-export const ObterPacote=[
-   {
-      id:1,
-      title:'Download',
-      icon: <FaCloudDownloadAlt/>
-   },
-   {
-      id:2,
-      title:'Whasapp',
-      icon: <FaWhatsapp/>
-   },
-   {
-      id:3,
-      title:'Whasapp',
-      icon: <FaPix/>
-   },
 ]

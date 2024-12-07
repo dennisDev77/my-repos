@@ -9,7 +9,7 @@ const Header = () => {
 
   return (
 
-    <section className='flex flex-wrap  justify-between items-center px-4 shadow-sm sticky w-full' >
+    <section className={`flex flex-wrap  bg-color-white justify-between items-center px-4 shadow-sm sticky w-full ${styles.header} `}>
         
         <Link to='/' className={styles.logo}>
             <img src={logo} alt="Carregndo o logotipo" />
@@ -27,8 +27,8 @@ const Header = () => {
             <div className='car'>
                 
                 <Link className={`${styles.iconBuy} text-3xl flex flex-wrap justify-center `}>
-                 <FaCartShopping/>
-                 <span></span>
+                 <span ><FaCartShopping/></span>
+                 <span className='text-xl'>R$ 00,00</span>
                 </Link>
 
                 {/* <span>

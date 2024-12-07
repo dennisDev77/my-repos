@@ -5,11 +5,12 @@ import Anual from '../Planos/Anual/Anual'
 import {ObterPacote} from '../Data/Data'
 import { LiaSearchSolid } from "react-icons/lia";
 import { Link } from 'react-router-dom'
+import card from '../../assets/planos/btv-black.jpg'
 
 const Home = () => {
 
   return (
-    <section className='container pt-10'>
+    <section className=' pt-10 bg-color-white'>
      
       <div className='flex flex-col flex-wrap gap-4'>      
         <h2 className='text-center text-3xl font-semibold'>Encontre seus Combos Da Red Play Aqui !</h2>
@@ -24,25 +25,48 @@ const Home = () => {
 
         </div>
 
+ 
+        <div className='py-12  flex flex-col justify-center items-center'>
+        {/* <h2 className='text-2xl font-medium text-color-black'>Pacotes Disponiveis</h2> */}
+  
+       <Link className='flex flex-wrap justify-center items-center gap-10'>
          <div>
-          <Mensal/>
+         <img src={card} alt="Carregando card" style={{width:'16rem'}} className='rounded-md'/>
+         <p className='text-center text-2xl font-medium text-color-black'>Mensal</p>
          </div>
 
          <div>
-          <Anual/>
+         <img src={card} alt="Carregando card" style={{width:'16rem'}} className='rounded-md'/>
+         <p className='text-center text-2xl font-medium text-color-black'>Anual</p>
          </div>
-
-         <div className='pt-20 flex flex-wrap justify-center items-center gap-10'>
+        </Link>
+    </div>
+     
+        <div className='pb-20 flex flex-wrap justify-center items-center gap-10 '>
           {
             ObterPacote.map((obter)=>(
-             <Link key={obter.id} className='border border-color-red shadow-md shadow-slate-300 rounded-md flex flex-col flex-wrap justify-center items-center w-1/6  h-32'>
+             <Link key={obter.id} className=' shadow-md shadow-slate-300 rounded-full flex flex-col flex-wrap justify-center items-center w-32  h-32 gap-1 hover:translate-y-2 transition'>
 
-                  <span className='text-color-red text-3xl'>{obter.icon}</span>
-                  <span className=''>{obter.title}</span>
+                  <span className='text-color-red text-4xl'>{obter.icon}</span>
+                  <span className='text-center'>{obter.title}</span>
              </Link>
             ))
           }
         </div>
+
+          <div className={`bg-color-black mt-10 rounded-md`}>
+         <div className=''>
+          <Mensal/>
+         </div>
+        
+         <div>
+          <Anual/>
+         </div>
+          </div>
+
+
+
+        
       
     </section>
   )

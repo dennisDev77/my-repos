@@ -10,7 +10,7 @@ import { Link } from 'react-router-dom'
 const Footer = () => {
   return (
 
-    <footer className=' px-6 py-4 pt-10'>
+    <footer className=' px-6 py-4 pt-16'>
 
     <div className='flex flex-wrap justify-around '>
 
@@ -20,7 +20,7 @@ const Footer = () => {
       </div>
 
       <div className=''>
-        <h2 className='text-color-white text-xl font-medium'>Download</h2>   
+        <h2 className='text-color-white text-base font-medium md:pt-4'>Download</h2>   
         <div className='flex flex-col flex-wrap text-gray-300 justify-center items-start font-light text-sm gap-1'>
 
           <Link className='flex flex-wrap justify-center items-center gap-1'>
@@ -35,7 +35,7 @@ const Footer = () => {
       </div>
 
       <div className=''>
-        <h2 className='text-color-white text-xl font-medium'>Contacto</h2>   
+        <h2 className='text-color-white text-base font-medium md:pt-4'>Contacto</h2>   
         <div className='flex flex-col flex-wrap text-gray-300 justify-center items-start font-light gap-1 text-sm'>
 
           <div className='flex flex-wrap justify-center items-center gap-1'>

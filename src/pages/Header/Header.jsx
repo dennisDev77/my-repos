@@ -26,9 +26,9 @@ const Header = () => {
 
             <div className='car'>
                 
-                <Link className={`${styles.iconBuy} text-3xl flex flex-wrap justify-center `}>
+                <Link className={`${styles.iconBuy} text-3xl flex flex-wrap justify-center items-center gap-2 `}>
                  <span ><FaCartShopping/></span>
-                 <span className='text-xl'>R$ 00,00</span>
+                 <span className='text-base'>R$ 00,00</span>
                 </Link>
 
                 {/* <span>

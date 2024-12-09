@@ -45,16 +45,17 @@ const Home = () => {
         <div className='pb-20 flex flex-wrap justify-center items-center gap-10 '>
           {
             ObterPacote.map((obter)=>(
-             <Link key={obter.id} className=' shadow-md shadow-slate-300 rounded-full flex flex-col flex-wrap justify-center items-center w-32  h-32 gap-1 hover:translate-y-2 transition'>
+             <Link to='downloads' key={obter.id} className=' shadow-md shadow-slate-300 rounded-full flex flex-col flex-wrap justify-center items-center w-32  h-32 gap-1 hover:translate-y-2 p-4 transition'>
 
                   <span className='text-color-red text-4xl'>{obter.icon}</span>
                   <span className='text-center'>{obter.title}</span>
+
              </Link>
             ))
           }
         </div>
 
-          <div className={`bg-color-black mt-10 rounded-md`}>
+          <div className={`bg-color-black mt-10`}>
          <div className=''>
           <Mensal/>
          </div>

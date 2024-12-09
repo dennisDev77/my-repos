@@ -17,9 +17,9 @@ const Header = () => {
 
         <div className='menus text-center flex flex-wrap justify-center items-center gap-3 font-light text-base'>
             <Link to='/' className='hover:scale-95 transition'>Home</Link>
-            <Link to='' className='hover:scale-95 transition'>Pacotes Mensal</Link>
-            <Link to='' className='hover:scale-95 transition'>Pacotes Anuais</Link>
-            <Link to='' className='hover:scale-95 transition'>Suporte</Link>
+            <Link to='mensal' className='hover:scale-95 transition'>Pacotes Mensal</Link>
+            <Link to='anual' className='hover:scale-95 transition'>Pacotes Anuais</Link>
+            <Link to='suporte' className='hover:scale-95 transition'>Suporte</Link>
         </div>
 
         <div className='flex flex-wrap justify-between items-center gap-8 px-2 '>

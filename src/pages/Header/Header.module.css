@@ -13,6 +13,38 @@
     height: 100%;
     width: 1px;
 } */
+.menuMbileStyle{
+    position: fixed;
+    top: 70px;
+    right: 2px;
+    opacity: 0;
+    pointer-events: none;
+}
+.mobileActive{
+    opacity: 1;
+    pointer-events: visible;
+}
+.mobileIcon{
+    height: 40px;
+    width: 40px;
+    transition: .6s;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0.2rem;
+    border: 2px solid #F71616;
+}
+.mobileIcon::after{
+    content: '';
+    display: block;
+    background-color: #F71616;
+    width: 1.2rem;
+    height: 2px;
+    border-radius: 2px;
+    box-shadow: 0 6px #F71616, 0 -6px #F71616;
+    transition: .3s;
+}
 .profile{
    & img{
     width:3.5rem;

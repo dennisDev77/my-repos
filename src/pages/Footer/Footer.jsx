@@ -8,18 +8,19 @@ import { MdOutlineTv } from "react-icons/md";
 import { Link } from 'react-router-dom'
 
 const Footer = () => {
+
   return (
 
     <footer className=' px-6 py-4 pt-16'>
 
-    <div className='flex flex-wrap justify-around '>
+    <div className='flex flex-wrap justify-around gap-10 '>
 
-      <div className=' w-2/4'>
+      <div className=' md:w-2/4 w-full'>
        <img src={logo} alt="Erro ao carregar o logo" style={{width:'10rem'}}/>
        <p className='text-justify text-sm text-gray-300 font-light'>ATIVARECARGAS é uma revenda de Gift Card dos mais variados segmentos. Isto significa que não é responsável por adicionar ou controlar conteúdo. Os usuários são responsáveis por baixar, instalar, alterar e adicionar seu próprio conteúdo conforme o Termo de Aceite. A ATIVARECARGAS não se responsabiliza pela perda do Gift Card.</p>
       </div>
 
-      <div className=''>
+      <div className=' '>
         <h2 className='text-color-white text-base font-medium md:pt-4'>Download</h2>   
         <div className='flex flex-col flex-wrap text-gray-300 justify-center items-start font-light text-sm gap-1'>
 
@@ -34,7 +35,7 @@ const Footer = () => {
         </div>
       </div>
 
-      <div className=''>
+      <div className=' '>
         <h2 className='text-color-white text-base font-medium md:pt-4'>Contacto</h2>   
         <div className='flex flex-col flex-wrap text-gray-300 justify-center items-start font-light gap-1 text-sm'>
 

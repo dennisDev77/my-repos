@@ -19,7 +19,7 @@ const Header = () => {
 
   return (
 
-    <section className={`flex flex-wrap  bg-color-white justify-between items-center px-4 shadow-sm sticky w-full ${styles.header} `}>
+    <section className={`flex flex-wrap  bg-color-white justify-between items-center px-4 shadow-sm sticky w-full ${styles.header} py-4 md:py-0`}>
         
         <Link to='/' className={styles.logo}>
             <img src={logo} alt="Carregndo o logotipo" />

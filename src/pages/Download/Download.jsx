@@ -10,12 +10,12 @@ const Download = () => {
 
         {
             Downloads.map(download=>(
-                <div key={download.id} className=' w-2/3'>
+                <div key={download.id} className=' md:w-2/3'>
                     <img src={download.img} alt="carregando imagem" />
                     <h3 className='text-2xl text-center'>{download.descricao}</h3>
-                    <div className='flex flex-wrap justify-around items-center py-2'>
-                    <button className='flex flex-wrap gap-1 justify-center items-center font-light px-4 py-2 rounded-full bg-color-red'><span>{download.button1}</span> <span>{download.icon1}</span></button>
-                    <button className='flex flex-wrap gap-1 justify-center items-center font-light px-4 py-2 rounded-full bg-color-red'><span>{download.button2}</span> <span>{download.icon2}</span></button>
+                    <div className='flex flex-wrap md:flex-row flex-col justify-around items-center py-2 gap-4'>
+                    <button className='flex flex-wrap gap-1 justify-center items-center font-light md:px-4 px-10 py-2 rounded-md md:rounded-full bg-color-red'><span>{download.button1}</span> <span>{download.icon1}</span></button>
+                    <button className='flex flex-wrap gap-1 justify-center items-center font-light md:px-4 px-10 py-2 rounded-md md:rounded-full bg-color-red'><span>{download.button2}</span> <span>{download.icon2}</span></button>
                     </div>
         
                 </div>

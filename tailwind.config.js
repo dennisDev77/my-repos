@@ -11,7 +11,7 @@ export default {
       'color-white':'#F5F6F7',
       'color-red':'#F71616',
       'color-black':'#020102',
-      'color-blue':'#7D4FE5',
+      'color-blue':'#6b43ca',
       'color-green':'#A2F11B',
       }
     },

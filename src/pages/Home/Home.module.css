@@ -1,0 +1,47 @@
+/* Styles to content reposiries */
+.contentRepo{
+  width: 50%;
+}
+/* Styles forms */
+form{
+
+    & input{
+        border: none;
+        outline: none;
+        box-shadow: 0 0 0 2px  #6b43ca;
+        border-top-left-radius: .3rem;
+        border-bottom-left-radius: .3rem;
+        transition: .3s;
+        &::placeholder{
+            color: #8570b8;
+        }
+    }
+
+    /* Styles Buttons */
+    & button{
+        border-top-right-radius: .3rem;
+        border-bottom-right-radius: .3rem;
+        box-shadow: 0 0 0 2px  #6b43ca;
+        transition: .3s;
+    }
+}
+
+/* Animation spinner */
+.spin{
+  animation: load 2s linear infinite;
+}
+@keyframes load {
+    from{
+        transform:rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+
+/* When window have max-wid */
+@media (max-width:48rem) {
+    .contentRepo{
+        width: 70%;
+      }   
+}

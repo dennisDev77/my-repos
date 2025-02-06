@@ -2,7 +2,7 @@
 
 :root{
     --font-family:"Poppins", Helvetica, sans-serif;  
-    --color-white:#F5F6F7;
+    --color-white: #f8fafc;
     --color-black:#050303;
     --color-blue:#6b43ca;
    }
@@ -14,7 +14,7 @@
    }
 
    body{
-    background: var(--color-white);
+    background-image: linear-gradient(to bottom right, var(--color-white),#e2e8f0,#f1f5f9);
     font-family: var(--font-family);
     color: var(--color-black);
     min-height: 100vh;
@@ -49,6 +49,9 @@ button{
  border: none;
  outline: none;
  cursor:pointer
+}
+button:disabled{
+ background-color: #937ace;
 }
 p{
  display: block;

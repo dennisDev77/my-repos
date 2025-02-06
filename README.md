@@ -5,7 +5,7 @@
 <h2 id="contribuir">Quer contribuir Contribuir ? 🚀</h2>
 
 ```bash
-    https://github.com/dennisDev77/my-repos.git
+https://github.com/dennisDev77/my-repos.git
 ```
 
 ```bash

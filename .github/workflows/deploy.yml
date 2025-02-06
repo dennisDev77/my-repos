@@ -1,4 +1,4 @@
-name:Fazendo Deploy  para vercel
+name: Fazendo Deploy  para vercel
 
 on:
   push:

@@ -12,8 +12,11 @@ form{
         border-top-left-radius: .3rem;
         border-bottom-left-radius: .3rem;
         transition: .3s;
+        background: #f8fafc;
+
         &::placeholder{
             color: #8570b8;
+            font-size: .8rem;
         }
     }
 

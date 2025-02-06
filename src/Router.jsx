@@ -10,7 +10,7 @@ function Router(){
         <BrowserRouter>
         <Routes>
             <Route path='/'  element={<Home/>}/>
-            <Route path='/repository'  element={<Repositorio/>}/>
+            <Route path='/repos'  element={<Repositorio/>}/>
         </Routes>
         </BrowserRouter>
         </>

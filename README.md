@@ -5,7 +5,7 @@
 <h2 id="contribuir">Quer contribuir Contribuir ? 🚀</h2>
 
 ```bash
-git clone https://github.com/dennisDev77/Ative_Recarga.git
+    https://github.com/dennisDev77/my-repos.git
 ```
 
 ```bash

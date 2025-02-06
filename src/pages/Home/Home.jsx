@@ -1,6 +1,6 @@
 import React from 'react'
 import styles from './Home.module.css'
-import {FaGithub, FaPlus, FaSpinner} from 'react-icons/fa'
+import {FaGithub, FaPlus, FaSpinner, FaHeart} from 'react-icons/fa'
 
 //Import API
 import api from '../../services/api'
@@ -11,18 +11,20 @@ const Home = () => {
     const [loading, setLoading]=React.useState(false)
 
     // We use useCallback because we work with same useState()
-    const handleClick =React.useCallback(()=>{
-
+    const handleClick =React.useCallback((e)=>{
+        e.preventDefault()
         async function submit(){
             setLoading(true)
            
             try{
-            const response= await api.get('/repositories')
+            const response= await api.get(`/repos/${newRepo}`)
+
              const data={
-                 name:response.data
+                 name:response.data.full_name
              }
+
             setRepo([...repo, data])
-            console.log(repo)
+            // console.log(repo.map((item)=>item.name))
             setNewRepo('')
 
         }catch(err){
@@ -51,7 +53,7 @@ const Home = () => {
 
             {/* Form to input Repositories */}
             <div>
-                <form action="" onSubmit={(e)=>e.preventDefault()} className='flex justify-center '>
+                <form action="" onSubmit={handleClick} className='flex justify-center '>
                     <input type="text" placeholder='Adicione Repositorio' className='text-base py-2 px-4 text-color-blue' value={newRepo} onChange={(e)=>setNewRepo(e.target.value)}  />
                     
                    { loading?
@@ -70,6 +72,23 @@ const Home = () => {
                     </button>
                     }
                 </form>
+            </div>
+        </div>
+
+        <div className='bg-slate-100  shadow-md  mt-8 border p-2 h-48 py-2 px-8 rounded-md  w-6/12'>
+            <div className='text-2xl font-medium flex items-center justify-center gap-2'>
+            <span className='text-color-blue'><FaHeart/></span>
+            <h2 className='text-color-black'>Favoritados</h2>
+            </div>
+
+            <div className='pt-4'>
+                <div>
+                    {
+                        repo.map((repo)=>{
+                            <span key={repo.name}>Gostou: <span className='font-bold'>{repo.name[1]}</span></span>
+                        })
+                    }
+                </div>
             </div>
         </div>
 

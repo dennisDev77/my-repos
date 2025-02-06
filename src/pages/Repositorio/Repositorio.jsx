@@ -1,9 +1,11 @@
 import React from 'react'
 
-const Repositorio = () => {
+const Repositorio = (parametro) => {
   return (
     <div>
-        Noso epositorio
+        <div>
+          <h2>{parametro.params.repos}</h2>
+        </div>
     </div>
   )
 }

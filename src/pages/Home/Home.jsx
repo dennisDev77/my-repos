@@ -1,26 +1,28 @@
 import React from 'react'
 import styles from './Home.module.css'
+import { Link } from 'react-router-dom'
+
+//Import Icons
 import {FaGithub, FaPlus, FaSpinner, FaHeart, FaBars, FaTrash} from 'react-icons/fa'
 
 //Import API
 import api from '../../services/api'
-import { Link } from 'react-router-dom'
 
 const Home = () => {
     const [newRepo, setNewRepo]=React.useState('')
     const [repo, setRepo]=React.useState([])
     const [loading, setLoading]=React.useState(false)
-
+    
+        // Show Repositories
+        React.useEffect(()=>{
+         const  repoStorage=localStorage.getItem('repos')
+         setRepo(JSON.parse(repoStorage))
+        }, [])
+        // sN7hAcN5B5niGYPuEKp3DuJ5
     // Save the repositories
         React.useEffect(()=>{
             localStorage.setItem('repos', JSON.stringify(repo))
         }, [repo])
-
-        // Show Repositories
-        React.useEffect(()=>{
-         const  repoStorage=localStorage.getItem('repos')
-            setRepo(JSON.parse(repoStorage))
-        }, [])
 
     // We use useCallback because we work with same useState()
     const handleClick =React.useCallback((e)=>{

@@ -1,0 +1,28 @@
+name:Fazendo Deploy  para vercel
+
+on:
+  push:
+    branches:
+      - main  # Altere para a branch que deseja usar para deploy
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Clonar repositório
+        uses: actions/checkout@v3
+
+      - name: Configurar Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18  # Use a versão do Node que seu projeto precisa
+
+      - name: Instalar dependências
+        run: npm install
+
+      - name: Construir projeto
+        run: npm run build
+
+      - name: Fazer deploy para a Vercel
+        run: npx vercel --token ${{ secrets.TokenVercel }} --prod

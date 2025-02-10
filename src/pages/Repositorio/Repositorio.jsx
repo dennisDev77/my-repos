@@ -5,6 +5,7 @@ const Repositorio = (parametro) => {
     <div>
         <div>
           <h2>{parametro.params.repos}</h2>
+          <h2>Nosso Teste</h2>
         </div>
     </div>
   )

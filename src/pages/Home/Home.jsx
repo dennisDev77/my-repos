@@ -19,6 +19,7 @@ const Home = () => {
          setRepo(JSON.parse(repoStorage))
         }, [])
         
+
     // Save the repositories
         React.useEffect(()=>{
             localStorage.setItem('repos', JSON.stringify(repo))
@@ -27,6 +28,7 @@ const Home = () => {
     // We use useCallback because we work with same useState()
     const handleClick =React.useCallback((e)=>{
         e.preventDefault()
+
         async function submit(){
             setLoading(true)
            
@@ -44,7 +46,6 @@ const Home = () => {
             setRepo([...repo, data])
 
             setNewRepo('')
-
 
         }catch(err){
             console.log(err.message)
@@ -82,17 +83,19 @@ const Home = () => {
                     
                    { loading?
                    <button onClick={handleClick} className='bg-color-blue text-color-white py-2 px-4 flex justify-center items-center' type='submit' disabled> 
-                        {loading ?
-                        <span className={`${styles.spin}`}><FaSpinner/></span>:
+                        { loading ?
+                        <span className={`${styles.spin}`}><FaSpinner/></span>
+                        :
                         <span><FaPlus/></span>
-                    }
+                        }
                     </button>
                     :
                    <button onClick={handleClick} className='bg-color-blue text-color-white py-2 px-4 flex justify-center items-center' type='submit'> 
-                        {loading ?
-                        <span className={`${styles.spin}`}><FaSpinner/></span>:
+                        { loading ?
+                        <span className={`${styles.spin}`}><FaSpinner/></span>
+                        :
                         <span><FaPlus/></span>
-                    }
+                        }
                     </button>
                     }
                 </form>
@@ -118,6 +121,7 @@ const Home = () => {
                     }
 
             </div>
+            
         </div>
 
     </section>

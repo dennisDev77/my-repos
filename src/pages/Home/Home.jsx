@@ -18,6 +18,7 @@ const Home = () => {
          const  repoStorage=localStorage.getItem('repos')
          setRepo(JSON.parse(repoStorage))
         }, [])
+        
 
     // Save the repositories
         React.useEffect(()=>{
@@ -101,13 +102,13 @@ const Home = () => {
             </div>
         </div>
 
-        <div className='bg-slate-100  shadow-md  mt-8 border p-2 h-48 py-2 px-8 rounded-md  w-6/12 pb-6'>
+        <div className='bg-slate-100  shadow-md  mt-8 border p-2 py-2 px-8 rounded-md  w-6/12 pb-6'>
             <div className='text-2xl font-medium flex items-center justify-start gap-2 py-3'>
             <span className='text-color-blue'><FaHeart/></span>
             <h2 className='text-color-black'>Favoritados</h2>
             </div>
 
-            <div className='pt-4 flex flex-col gap-4'>
+            <div className='pt-4 flex flex-col gap-4 '>
                     
                     {
                         repo.map((repos)=>(

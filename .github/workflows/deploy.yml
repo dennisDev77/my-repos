@@ -1,4 +1,4 @@
-name:Fazendo Deploy  para vercel
+name: Fazendo Deploy  para vercel
 
 on:
   push:
@@ -25,4 +25,4 @@ jobs:
         run: npm run build
 
       - name: Fazer deploy para a Vercel
-        run: npx vercel --token ${{ secrets.TokenVercel }} --prod
+        run: npx vercel --token ${{ secrets.TokenVercel }} --prod --yes

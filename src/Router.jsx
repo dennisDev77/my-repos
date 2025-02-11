@@ -9,8 +9,8 @@ function Router(){
         <>
         <BrowserRouter>
         <Routes>
-            <Route path='/'  element={<Home/>}/>
-            <Route path='/repos/:repos'  element={<Repositorio/>}/>
+            <Route exact path='/'  element={<Home/>}/>
+            <Route exact path='/repos/:repos'  element={<Repositorio/>}/>
         </Routes>
         </BrowserRouter>
         </>

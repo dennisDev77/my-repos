@@ -17,8 +17,7 @@ const Home = () => {
         React.useEffect(()=>{
          const  repoStorage=localStorage.getItem('repos')
          setRepo(JSON.parse(repoStorage))
-        }, [])
-        
+        }, [])     
 
     // Save the repositories
         React.useEffect(()=>{

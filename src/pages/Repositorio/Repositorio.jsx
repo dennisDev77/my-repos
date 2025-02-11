@@ -1,15 +1,18 @@
 import React from 'react'
-import { useParams, Link} from 'react-router-dom'
+import { useParams} from 'react-router-dom'
 import api from '../../services/api'
 
 //Importando icones
-import {FaArrowLeft, FaSpinner} from 'react-icons/fa'
+import {FaSpinner} from 'react-icons/fa'
 
 const Repositorio = () => {
+  //useState()
   const [repo, setRepo]=React.useState({})
   const [issues, setIssues]=React.useState([])  
   const [loading, setLoading]=React.useState(true)
-  const [page, setPage]=React.useState()
+  const [page, setPage]=React.useState(1)
+
+   //Get Params
    let {repos}=useParams()
 
     React.useEffect(()=>{
@@ -33,10 +36,25 @@ const Repositorio = () => {
       loadRepository()
     }, [repos])
 
+      React.useEffect(()=>{
+
+        async function loadIssues(){
+          const response = await api.get(`repos/${repos}/issues`, {
+            params:{
+              page:page,
+              per_page:5
+            }
+          })
+          setIssues(response.data)
+        }
+
+        loadIssues()
+      },[repos, page])
+
+
     function handlePage(action){
 
       setPage(action==='back' ? page-1 : page+1)
-      console.log(page)
     }
 
   return (
@@ -93,8 +111,9 @@ const Repositorio = () => {
 
           {/* Button ... next and back */}
           <div className='py-6 flex justify-between items-center rounded-md'>
-            <button onClick={()=>handlePage('back')} type='button' className='bg-color-blue text-color-white py-1 px-4'>Voltar</button>
-            <button onClick={()=>handlePage('next')} type='button' className='bg-color-blue text-color-white py-1 px-4'>Proxima</button>
+            <button onClick={()=>handlePage('back')} type='button' className='bg-color-blue text-color-white py-1 px-4 rounded-sm' disabled={page<2}>Voltar</button>
+
+            <button onClick={()=>handlePage('next')} type='button' className='bg-color-blue text-color-white py-1 px-4 rounded-sm'>Proxima</button>
           </div>
         </div>
       } 

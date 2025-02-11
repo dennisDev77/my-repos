@@ -51,7 +51,8 @@ button{
  cursor:pointer
 }
 button:disabled{
- background-color: #937ace;
+ opacity: .5;
+ cursor: not-allowed;
 }
 p{
  display: block;

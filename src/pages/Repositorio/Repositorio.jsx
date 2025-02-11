@@ -9,6 +9,7 @@ const Repositorio = () => {
   const [repo, setRepo]=React.useState({})
   const [issues, setIssues]=React.useState([])  
   const [loading, setLoading]=React.useState(true)
+  const [page, setPage]=React.useState()
    let {repos}=useParams()
 
     React.useEffect(()=>{
@@ -17,7 +18,11 @@ const Repositorio = () => {
 
         const [repository, issues] =await Promise.all([
           api.get(`/repos/${repos}`),
-          api.get(`/repos/${repos}/issues`)
+          api.get(`/repos/${repos}/issues`, {
+            params:{
+              per_page:5
+            }
+          })
         ])
         
         setRepo(repository.data)
@@ -28,9 +33,15 @@ const Repositorio = () => {
       loadRepository()
     }, [repos])
 
+    function handlePage(action){
+
+      setPage(action==='back' ? page-1 : page+1)
+      console.log(page)
+    }
+
   return (
     <section className={`h-lvh flex flex-col flex-wrap items-center ${loading? 'justify-center': 'pt-28'}`}>
-      <Link className='text-color-white bg-color-blue  p-2 fixed top-10 rounded-md' to='/' end>Home</Link>
+      <Link className='text-color-white bg-color-blue  p-2 fixed top-10 rounded-md z-20' to='/' end>Home</Link>
       { 
       loading ? 
       
@@ -38,7 +49,7 @@ const Repositorio = () => {
         <FaSpinner/>
         </div>
         :
-        <div className='bg-slate-100 shadow-md py-1 px-8 rounded-md w-2/4'>
+        <div className='bg-slate-100 shadow-md py-1 px-8 rounded-md w-2/4 -z-50'>
           {/* <div className=''>
                 <FaArrowLeft/>
           </div> */}
@@ -79,6 +90,12 @@ const Repositorio = () => {
               ))
             }
 
+          </div>
+
+          {/* Button ... next and back */}
+          <div className='py-6 flex justify-between items-center rounded-md'>
+            <button onClick={()=>handlePage('back')} type='button' className='bg-color-blue text-color-white py-1 px-4'>Voltar</button>
+            <button onClick={()=>handlePage('next')} type='button' className='bg-color-blue text-color-white py-1 px-4'>Proxima</button>
           </div>
         </div>
       } 

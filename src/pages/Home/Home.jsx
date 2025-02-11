@@ -113,7 +113,7 @@ const Home = () => {
                         repo.map((repos)=>(
                         <div className='flex justify-between gap-4' key={repos.name}>
                             <button className='font-light' onClick={()=>handleDelete(repos.name)} ><FaTrash/></button>
-                            <Link className='font-normal' to='/repos'>{repos.name}</Link>
+                            <Link className='font-normal' to={`/repos/${encodeURIComponent(repos.name)}`}>{repos.name}</Link>
                             <Link className='font-light' to={`/repos/${encodeURIComponent(repos.name)}`}><FaBars/></Link>
                         </div>
                         ))

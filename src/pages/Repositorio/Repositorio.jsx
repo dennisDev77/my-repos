@@ -41,7 +41,6 @@ const Repositorio = () => {
 
   return (
     <section className={`h-lvh flex flex-col flex-wrap items-center ${loading? 'justify-center': 'pt-28'}`}>
-      <Link className='text-color-white bg-color-blue  p-2 fixed top-10 rounded-md z-20' to='/' end>Home</Link>
       { 
       loading ? 
       
@@ -82,7 +81,7 @@ const Repositorio = () => {
                         </span>
                       ))
                     }
-                    <span>{issue.user.login}</span>
+                    <span>Autor: {issue.user.login}</span>
                   </div>
 
                 </div>

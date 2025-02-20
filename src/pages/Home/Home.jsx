@@ -35,7 +35,8 @@ const Home = () => {
             const response= await api.get(`/repos/${newRepo}`)
 
              const data={
-                 name:response.data.full_name
+                 name:response.data.full_name,
+                 url:response.data.html_url
              }
 
              const hasRepo=repo.find((repo)=>repo.name===newRepo)
@@ -114,7 +115,7 @@ const Home = () => {
                         <div className='flex justify-between gap-4' key={repos.name}>
                             <button className='font-light' onClick={()=>handleDelete(repos.name)} ><FaTrash/></button>
                             
-                            <Link className='font-normal' end='true' to={`/repos/${encodeURIComponent(repos.name)}`}>{repos.name}</Link>
+                            <Link className='font-normal' end='true' to={repos.url} target='_blink'>{repos.name}</Link>
 
                             <Link className='font-light' end='true' to={`/repos/${encodeURIComponent(repos.name)}`}><FaBars/></Link>
                         </div>

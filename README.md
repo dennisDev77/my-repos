@@ -1,6 +1,8 @@
 
  > The my repos project is focused on helping you securely store your favorite repositories 🚀👩‍💻
 
+## Skills
+[![My Skills](https://skillicons.dev/icons?i=js,vite,react,tailwind)](https://skillicons.dev)
 
 <h2 id="contribuir">Quer contribuir Contribuir ? 🚀</h2>
 

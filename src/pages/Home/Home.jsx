@@ -8,6 +8,9 @@ import {FaGithub, FaPlus, FaSpinner, FaHeart, FaBars, FaTrash} from 'react-icons
 //Import API
 import api from '../../services/api'
 
+// import components 
+import Button from '../../components/Button'
+
 const Home = () => {
     const [newRepo, setNewRepo]=React.useState('')
     const [repo, setRepo]=React.useState([])
@@ -82,21 +85,21 @@ const Home = () => {
                     <input type="text" placeholder='Add Repos Ex: user/repos' className='text-base py-2 px-4 text-color-blue' value={newRepo} onChange={(e)=>setNewRepo(e.target.value)}  />
                     
                    { loading?
-                   <button onClick={handleClick} className='bg-color-blue text-color-white py-2 px-4 flex justify-center items-center' type='submit' disabled> 
+                   <Button onClick={handleClick} type='submit' disabled> 
                         { loading ?
                         <span className={`${styles.spin}`}><FaSpinner/></span>
                         :
                         <span><FaPlus/></span>
                         }
-                    </button>
+                    </Button>
                     :
-                   <button onClick={handleClick} className='bg-color-blue text-color-white py-2 px-4 flex justify-center items-center' type='submit'> 
+                   <Button onClick={handleClick} type='submit'> 
                         { loading ?
                         <span className={`${styles.spin}`}><FaSpinner/></span>
                         :
                         <span><FaPlus/></span>
                         }
-                    </button>
+                    </Button>
                     }
                 </form>
             </div>

@@ -5,7 +5,11 @@ import api from '../../services/api'
 //Importando icones
 import {FaSpinner} from 'react-icons/fa'
 
+// import components 
+import Button from '../../components/Button'
+
 const Repositorio = () => {
+
   //useState()
   const [repo, setRepo]=React.useState({})
   const [issues, setIssues]=React.useState([])  
@@ -87,10 +91,11 @@ const Repositorio = () => {
             {/* Exibindo os detalhes da Issuesl */}
           <div>
 
-            <button className={`border border-color-blue bg-color-white py-1 px-4 rounded-sm`} onClick={handleBtnIssues} type='button'>
+            <Button  onClick={handleBtnIssues} type='button'>
             {btnIssues ? 'Aberto' : 'Fechado' }
-           </button>
+           </Button>
 
+            <h2 className='pt-4 font-medium'>Issues Abertos</h2>
             {
               issues.map((issue)=>(
                 <div key={String(issue.id)} className='flex justify-start items-center gap-4 pt-8'>
@@ -119,9 +124,9 @@ const Repositorio = () => {
 
           {/* Button ... next and back */}
           <div className='py-6 flex justify-between items-center rounded-md'>
-            <button onClick={()=>handlePage('back')} type='button' className='bg-color-blue text-color-white py-1 px-4 rounded-sm' disabled={page<2}>Voltar</button>
+            <Button onClick={()=>handlePage('back')} disabled={page<2} type='button' >Voltar</Button>
 
-            <button onClick={()=>handlePage('next')} type='button' className='bg-color-blue text-color-white py-1 px-4 rounded-sm'>Proxima</button>
+            <Button onClick={()=>handlePage('next')} type='button'>Proxima</Button>
           </div>
         </div>
       } 

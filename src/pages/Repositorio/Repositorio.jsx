@@ -66,7 +66,7 @@ const Repositorio = () => {
       setBtnIssues(!btnIssues)
     }
   return (
-    <section className={`h-lvh flex flex-col flex-wrap items-center ${loading? 'justify-center': 'pt-28'}`}>
+    <section className={`min-h-screen flex flex-col flex-wrap items-center ${loading? 'justify-center': 'pt-28'}`}>
       { 
       loading ? 
       

@@ -122,7 +122,7 @@ const Repositorio = () => {
 
           </div>
 
-          {/* Button ... next and back */}
+          {/* Button Navigate */}
           <div className='py-6 flex justify-between items-center rounded-md'>
             <Button onClick={()=>handlePage('back')} disabled={page<2} type='button' >Voltar</Button>
 
